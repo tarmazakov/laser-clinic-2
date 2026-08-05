@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+/* Self-hosted variable-weight fonts (Cyrillic + Latin subsets) */
+@import "@fontsource/golos-text/cyrillic-400.css";
+@import "@fontsource/golos-text/cyrillic-500.css";
+@import "@fontsource/golos-text/cyrillic-600.css";
+@import "@fontsource/golos-text/cyrillic-700.css";
+@import "@fontsource/golos-text/latin-400.css";
+@import "@fontsource/golos-text/latin-500.css";
+@import "@fontsource/golos-text/latin-600.css";
+@import "@fontsource/golos-text/latin-700.css";
+@import "@fontsource/yeseva-one/cyrillic-400.css";
+@import "@fontsource/yeseva-one/latin-400.css";
+
+:root {
+  /* Light theme — clinical cream + charcoal-navy + sage (raw tokens) */
+  --canvas: #FEEECC;
+  --canvas-soft: #FFF6E4;
+  --surface: #FFFDF8;
+  --surface-raised: #FFFFFF;
+
+  --ink: #012137;
+  --ink-soft: #3E5568;
+  --ink-faint: #7C8D9B;
+
+  --sage: #5F8F79;
+  --sage-deep: #3E6653;
+  --sage-pale: #DCEBE0;
+
+  --line: #E6D6AE;
+  --line-soft: #EFE2C2;
+
+  --accent-warn: #B5602E;
+}
+
+.dark {
+  --canvas: #051620;
+  --canvas-soft: #081E2B;
+  --surface: #0B2431;
+  --surface-raised: #0E2B39;
+
+  --ink: #FBEFD4;
+  --ink-soft: #C9D8DE;
+  --ink-faint: #85A0A9;
+
+  --sage: #7CB79C;
+  --sage-deep: #A6D6BE;
+  --sage-pale: #133327;
+
+  --line: #1B3B47;
+  --line-soft: #142B35;
+
+  --accent-warn: #E0916A;
+}
+
+@theme inline {
+  /* Map raw tokens into Tailwind's color theme namespace so utilities
+     like bg-canvas, text-ink, border-sage, etc. are generated. */
+  --color-canvas: var(--canvas);
+  --color-canvas-soft: var(--canvas-soft);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-sage-pale: var(--sage-pale);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --color-accent-warn: var(--accent-warn);
+
+  --font-display: "Yeseva One", "Golos Text", serif;
+  --font-body: "Golos Text", "Golos Text Fallback", system-ui, sans-serif;
+
+  --animate-sweep: sweep 3.2s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-drift: drift 9s ease-in-out infinite;
+
+  @keyframes sweep {
+    0%, 100% { transform: translateY(-46%); opacity: 0; }
+    12% { opacity: 1; }
+    50% { transform: translateY(46%); opacity: 1; }
+    88% { opacity: 1; }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes drift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(2%, -3%) scale(1.03); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: var(--color-sage);
+  color: var(--color-canvas);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-sage);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
