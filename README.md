@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sanari — сайт лазерного сведения тату и татуажа
 
-## Getting Started
+Next.js 15 (App Router) + TypeScript + Tailwind CSS v4.
 
-First, run the development server:
+## Запуск на своём компьютере
+
+Нужен установленный Node.js версии 18 или новее (nodejs.org).
 
 ```bash
+# 1. Установить зависимости (один раз)
+npm install
+
+# 2. Запустить сайт в режиме разработки
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте в браузере: http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Каждое изменение в коде сразу видно в браузере — перезапускать сервер не нужно.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Другие команды
 
-## Learn More
+```bash
+npm run build   # собрать production-версию (проверка перед деплоем)
+npm run start   # запустить собранную production-версию локально
+npm run lint    # проверить код на ошибки
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Структура проекта
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+app/                    страницы (маршруты) — по одной папке на страницу
+  page.tsx              Главная
+  how-it-works/         Как это работает
+  services/              Услуги и цены
+  gallery/               До / После
+  about/                  Обо мне
+  reviews/                Отзывы
+  contact/                Контакты
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+components/
+  ui/                    переиспользуемые элементы (кнопка, карточки, иконки…)
+  home/                  секции главной страницы
+  how-it-works/          секции страницы «Как это работает»
+  services/               секции страницы «Услуги и цены»
+  gallery/                 секции страницы «До / После»
+  about/                   секции страницы «Обо мне»
+  reviews/                 секции страницы «Отзывы»
+  contact/                 секции страницы «Контакты»
 
-## Deploy on Vercel
+lib/content.ts           все тексты, цены, контакты, отзывы и FAQ в одном файле
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Что нужно заменить перед публикацией
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- lib/content.ts — телефон, адрес, ссылки на Telegram/WhatsApp/Instagram/YouTube
+- Плейсхолдеры фото (пунктирные рамки с подписью) на страницах Главная, Галерея,
+  Обо мне — замените на реальные фотографии клиентов и клиники
+- Плейсхолдеры [X] на странице «Обо мне» и «Отзывы» — реальные цифры (стаж, число клиентов)
+- Форма на странице «Контакты» пока не отправляет данные никуда — это сделано
+  намеренно (следующий этап работы), сейчас это только интерфейс с проверкой полей
