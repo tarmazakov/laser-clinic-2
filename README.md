@@ -51,6 +51,42 @@ components/
 lib/content.ts           все тексты, цены, контакты, отзывы и FAQ в одном файле
 ```
 
+## Публикация на GitHub Pages
+
+Сайт настроен на статический экспорт (`output: "export"` в `next.config.ts`),
+поэтому подходит для GitHub Pages без отдельного сервера.
+
+### Способ 1 — автоматически (рекомендуется)
+
+1. Создайте репозиторий на GitHub и запушьте туда код:
+   ```bash
+   git remote add origin https://github.com/USERNAME/REPO.git
+   git push -u origin master
+   ```
+2. В репозитории: **Settings → Pages → Source** выберите **GitHub Actions**.
+3. Готово. При каждом пуше в ветку `main` workflow
+   `.github/workflows/deploy.yml` сам соберёт сайт и опубликует его.
+   Если ваша ветка называется `master`, поменяйте `main` на `master` в этом файле.
+
+### Способ 2 — вручную, одной командой
+
+```bash
+git remote add origin https://github.com/USERNAME/REPO.git   # один раз
+npm run deploy
+```
+
+Скрипт `scripts/deploy.sh` соберёт сайт и запушит папку `out/` в ветку `gh-pages`.
+После первого запуска зайдите в **Settings → Pages** и укажите
+**Source: Deploy from a branch → gh-pages / (root)**.
+
+### Важно про адрес сайта
+
+- Если репозиторий называется `USERNAME.github.io` — сайт откроется по адресу
+  `https://USERNAME.github.io/`, префикс пути не нужен, всё настроится само.
+- Если репозиторий называется иначе (например `sanari-clinic`) — сайт будет по
+  адресу `https://USERNAME.github.io/sanari-clinic/`, и `next.config.ts`
+  автоматически подставит нужный путь при сборке в GitHub Actions.
+
 ## Что нужно заменить перед публикацией
 
 - lib/content.ts — телефон, адрес, ссылки на Telegram/WhatsApp/Instagram/YouTube
