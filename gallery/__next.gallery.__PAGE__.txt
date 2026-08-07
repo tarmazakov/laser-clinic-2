@@ -1,0 +1,20 @@
+1:"$Sreact.fragment"
+2:I[91446,["/laser-clinic-2/_next/static/chunks/357pe-qad9b0d.js","/laser-clinic-2/_next/static/chunks/2ymcyjx1v31dq.js"],"GalleryGrid"]
+3:I[97367,["/laser-clinic-2/_next/static/chunks/357pe-qad9b0d.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+8:I[97367,["/laser-clinic-2/_next/static/chunks/357pe-qad9b0d.js"],"ViewportBoundary"]
+9:I[97367,["/laser-clinic-2/_next/static/chunks/357pe-qad9b0d.js"],"MetadataBoundary"]
+b:I[39756,["/laser-clinic-2/_next/static/chunks/357pe-qad9b0d.js"],"default"]
+c:I[37457,["/laser-clinic-2/_next/static/chunks/357pe-qad9b0d.js"],"default"]
+7:X
+e:X
+e:C
+0:{"buildId":"whDRVvtmfnlsOgvvqCx_V","data":[{"rsc":["$","$1","c",{"children":[[["$","section",null,{"className":"relative overflow-hidden pb-16 pt-14 sm:pb-20 sm:pt-20","children":[["$","div",null,{"className":"pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-sage/10 blur-3xl","aria-hidden":true}],["$","div",null,{"className":"mx-auto w-full max-w-[1180px] px-5 sm:px-8 flex flex-col gap-5 animate-fade-up","children":[["$","span",null,{"className":"inline-flex items-center gap-2 text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-sage-deep","children":[["$","span",null,{"className":"h-[6px] w-[6px] rounded-full bg-sage","aria-hidden":true}],"До / После"]}],["$","h1",null,{"className":"max-w-[720px] font-display text-[2.2rem] leading-[1.15] sm:text-[3rem]","children":"Только реальные фотографии клиентов"}],["$","p",null,{"className":"max-w-[600px] text-[1.05rem] leading-relaxed text-ink-soft","children":"Никаких стоковых изображений — каждый случай ниже прошёл через нашу клинику."}]]}]]}],["$","$L2",null,{}]],[["$","script","script-0",{"src":"/laser-clinic-2/_next/static/chunks/2ymcyjx1v31dq.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":"$@6","staleTime":"$7","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L8",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"До и после — Sanari"}],["$","meta","1",{"name":"description","content":"Реальные результаты сведения тату и перманентного макияжа — фото клиентов до и после курса лазерных сеансов."}]]}]}]}],null]}],"isPartial":"$@a","staleTime":"$7","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","template":["$","$Lc",null,{}]}]]}],"isPartial":"$@d","staleTime":"$7","varyParams":"$e"}],"isUpgradeableISRFallback":false,"a":"$@f","rootVaryParams":null,"needsRuntimeRequest":"$@10"}
+5:null
+10:true
+7:300
+7:C
+f:0
+a:"$undefined"
+d:"$undefined"
+6:"$undefined"
