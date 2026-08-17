@@ -1,4 +1,4 @@
-# Sanari — сайт лазерного сведения тату и татуажа
+# Koja — сайт лазерного сведения тату и татуажа
 
 Next.js 15 (App Router) + TypeScript + Tailwind CSS v4.
 

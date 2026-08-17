@@ -7,8 +7,8 @@ import { StickyMobileCta } from "@/components/StickyMobileCta";
 
 export const metadata: Metadata = {
   title: {
-    default: "Sanari — сведение тату и татуажа лазером без шрамов и ожогов",
-    template: "%s — Sanari",
+    default: "Koja — сведение тату и татуажа лазером без шрамов и ожогов",
+    template: "%s — Koja",
   },
   description:
     "Медицинский лазерный центр сведения тату и перманентного макияжа. Без корочек, ожогов и рубцов. Бесплатная консультация и план сеансов уже на первой встрече.",
