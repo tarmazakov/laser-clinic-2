@@ -1,26 +1,23 @@
 export const site = {
   name: "Клиника Лазерного Сведения",
-  shortName: "Sanari",
-  phone: "+7 (XXX) XXX-XX-XX",
-  phoneHref: "tel:+7XXXXXXXXXX",
-  telegram: "https://t.me/your_clinic",
-  whatsapp: "https://wa.me/7XXXXXXXXXX",
-  address: "Москва, [ваш адрес студии/клиники]",
+  shortName: "KOJA",
+  phone: "+7 (903) 162-99-49",
+  phoneHref: "tel:+79031629949",
+  telegram: "https://t.me/koja_laser",
+  whatsapp: "https://wa.me/79151692121",
+  address: "г. Чебоксары Московский пр-т 38к4, этаж -1,пом. 1014",
   hours: [
-    { days: "Пн – Пт", time: "10:00 – 20:00" },
-    { days: "Сб", time: "11:00 – 18:00" },
-    { days: "Вс", time: "выходной" },
+    { days: "Пн – Вс", time: "10:00 – 21:00" },
   ],
-  instagram: "https://instagram.com/your_clinic",
-  youtube: "https://youtube.com/@your_clinic",
-};
+  instagram: "https://instagram.com/koja.laser",
+  vk: "https://vk.ru/kojalaser",};
 
 export const nav = [
   { href: "/", label: "Главная" },
   { href: "/how-it-works", label: "Как это работает" },
-  { href: "/services", label: "Услуги и цены" },
-  { href: "/gallery", label: "До / После" },
-  { href: "/about", label: "Обо мне" },
+  { href: "/services", label: "Цены" },
+  { href: "/gallery", label: "До/После" },
+  { href: "/about", label: "О нас" },
   { href: "/reviews", label: "Отзывы" },
   { href: "/contact", label: "Контакты" },
 ];

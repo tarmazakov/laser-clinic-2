@@ -82,9 +82,9 @@ export function Header() {
             {theme === "light" ? <IconMoon className="h-[18px] w-[18px]" /> : <IconSun className="h-[18px] w-[18px]" />}
           </button>
 
-          <Button href="/contact" size="md" className="hidden lg:inline-flex">
-            {ctaLabel}
-          </Button>
+          {/* <Button href="/contact" size="md" className="hidden lg:inline-flex"> */}
+            {/* {ctaLabel} */}
+          {/* </Button> */}
 
           <button
             aria-label={open ? "Закрыть меню" : "Открыть меню"}

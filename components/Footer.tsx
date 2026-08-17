@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container } from "./ui/Container";
-import { IconInstagram, IconPhone, IconTelegram, IconYoutube } from "./ui/Icons";
+import { IconInstagram, IconPhone, IconTelegram, IconVk } from "./ui/Icons";
 import { nav, site } from "@/lib/content";
 
 export function Footer() {
@@ -29,13 +29,13 @@ export function Footer() {
               <IconInstagram className="h-[18px] w-[18px]" />
             </a>
             <a
-              href={site.youtube}
+              href={site.vk}
               target="_blank"
               rel="noreferrer"
-              aria-label="YouTube"
+              aria-label="VK"
               className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 text-ink-soft transition-colors hover:border-sage hover:text-sage-deep"
             >
-              <IconYoutube className="h-[18px] w-[18px]" />
+              <IconVk className="h-[18px] w-[18px]" />
             </a>
             <a
               href={site.telegram}
